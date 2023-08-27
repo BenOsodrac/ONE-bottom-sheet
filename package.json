@@ -1,0 +1,43 @@
+{
+	"name": "one-bottom-sheet",
+	"version": "2.12.0",
+	"description": "Bottom Sheet extensibility demo for ONE Conference",
+	"scripts": {
+		"build": "gulp createProduction && npm run lint",
+		"create-pattern": "gulp newPattern",
+		"dev": "gulp startDevelopment",
+		"lint": "eslint . --ext .ts",
+		"lintfix": "eslint . --fix --ext .ts",
+		"prettier": "prettier --config ./.prettierrc.json --write \"**/*.+(js|ts|css)\"",
+		"setup": "npm i && npm run dev"
+	},
+	"author": "Bernardo Cardoso",
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^4.23.0",
+		"@typescript-eslint/parser": "^4.23.0",
+		"browser-sync": "^2.27.7",
+		"eslint": "^7.26.0",
+		"eslint-config-prettier": "^7.0.0",
+		"eslint-plugin-prettier": "^3.4.0",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^8.0.0",
+		"gulp-clean": "^0.4.0",
+		"gulp-confirm": "^1.0.8",
+		"gulp-postcss": "^9.0.1",
+		"gulp-remove-empty-lines": "^0.1.0",
+		"gulp-rename": "^2.0.0",
+		"gulp-sass": "^5.1.0",
+		"gulp-sourcemaps": "^3.0.0",
+		"gulp-template": "^5.0.0",
+		"gulp-typescript": "^6.0.0-alpha.1",
+		"outsystems-ui": "^2.14.0",
+		"postcss": "^8.4.5",
+		"postcss-discard-comments": "^5.0.1",
+		"prettier-eslint": "^12.0.0",
+		"sass": "^1.48.0",
+		"stylelint": "^13.12.0",
+		"stylelint-config-prettier": "^8.0.2",
+		"stylelint-order": "^4.1.0",
+		"typescript": "^4.5.0"
+	}
+}
