@@ -1,6 +1,6 @@
 /// <reference path="../../node_modules/outsystems-ui/dist/OutSystemsUI.d.ts" />
 
-namespace OverridePattern.BottomSheet {
+namespace MyJSFramework.BottomSheet {
     // Override OSUI Initialize method
     OutSystems.OSUI.Patterns.BottomSheetAPI.Initialize = CustomInitialize;
 
@@ -15,11 +15,11 @@ namespace OverridePattern.BottomSheet {
         return myBottomSheet;
     }
 
-    // My custom Sidebar Class
+    // My custom BottomSheet Class 
     export class MyBottomSheet {
-        // OutSystems Submenu instance
+        // OutSystems BottomSheet instance
         private _osuiBottomSheet: OSFramework.OSUI.Patterns.BottomSheet.IBottomSheet;
-        private _bottomSheetOverlayElement: HTMLElement;
+        private _bottomSheetOverlayElem: HTMLElement;
 
         constructor(bottomSheet: OSFramework.OSUI.Patterns.BottomSheet.IBottomSheet) {
             this._osuiBottomSheet = bottomSheet;
@@ -28,10 +28,10 @@ namespace OverridePattern.BottomSheet {
         public build() {
             this._osuiBottomSheet.build();
 
-            this._bottomSheetOverlayElement = OSFramework.OSUI.Helper.Dom.ClassSelector(this._osuiBottomSheet.selfElement.parentElement, OSFramework.OSUI.Patterns.BottomSheet.Enum.CssClass.PatternOverlay);
+            this._bottomSheetOverlayElem = OSFramework.OSUI.Helper.Dom.ClassSelector(this._osuiBottomSheet.selfElement.parentElement, OSFramework.OSUI.Patterns.BottomSheet.Enum.CssClass.PatternOverlay);
 
-            this._bottomSheetOverlayElement.addEventListener('click', () => {
-                this._osuiBottomSheet.close();
+            this._bottomSheetOverlayElem.addEventListener(OSFramework.OSUI.GlobalEnum.HTMLEvent.Click, () => {
+                // 
             })
         }
     }

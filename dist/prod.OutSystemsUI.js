@@ -1,6 +1,6 @@
 "use strict";
-var OverridePattern;
-(function (OverridePattern) {
+var MyJSFramework;
+(function (MyJSFramework) {
     var BottomSheet;
     (function (BottomSheet) {
         OutSystems.OSUI.Patterns.BottomSheetAPI.Initialize = CustomInitialize;
@@ -17,14 +17,12 @@ var OverridePattern;
             }
             build() {
                 this._osuiBottomSheet.build();
-                this._bottomSheetOverlayElement = OSFramework.OSUI.Helper.Dom.ClassSelector(this._osuiBottomSheet.selfElement.parentElement, OSFramework.OSUI.Patterns.BottomSheet.Enum.CssClass.PatternOverlay);
-                this._bottomSheetOverlayElement.addEventListener('click', () => {
+                this._bottomSheetOverlayElem = OSFramework.OSUI.Helper.Dom.ClassSelector(this._osuiBottomSheet.selfElement.parentElement, OSFramework.OSUI.Patterns.BottomSheet.Enum.CssClass.PatternOverlay);
+                this._bottomSheetOverlayElem.addEventListener(OSFramework.OSUI.GlobalEnum.HTMLEvent.Click, () => {
                     this._osuiBottomSheet.close();
                 });
             }
         }
         BottomSheet.MyBottomSheet = MyBottomSheet;
-    })(BottomSheet = OverridePattern.BottomSheet || (OverridePattern.BottomSheet = {}));
-})(OverridePattern || (OverridePattern = {}));
-
-//# sourceMappingURL=dev.OutSystemsUI.js.map
+    })(BottomSheet = MyJSFramework.BottomSheet || (MyJSFramework.BottomSheet = {}));
+})(MyJSFramework || (MyJSFramework = {}));
