@@ -1,0 +1,29 @@
+/* Resets */
+@import 'node_modules/outsystems-ui/src/scss/01-foundations/_resets.scss';
+
+/* Design System Foundations */
+@import 'node_modules/outsystems-ui/src/scss/00-abstract/_mixins.scss';
+@import 'node_modules/outsystems-ui/src/scss/00-abstract/_setup-border-vars.scss';
+@import 'node_modules/outsystems-ui/src/scss/00-abstract/_setup-color-vars.scss';
+@import 'node_modules/outsystems-ui/src/scss/00-abstract/_setup-global-typography-vars.scss';
+@import 'node_modules/outsystems-ui/src/scss/00-abstract/_setup-global-vars.scss';
+@import 'node_modules/outsystems-ui/src/scss/01-foundations/_root.scss';
+@import 'node_modules/outsystems-ui/src/scss/01-foundations/_html-elements-headings.scss';
+
+/* Layout Styles */
+@import 'node_modules/outsystems-ui/src/scss/02-layout/_layout.scss';
+@import 'node_modules/outsystems-ui/src/scss/02-layout/_header-layout-native.scss';
+@import 'node_modules/outsystems-ui/src/scss/02-layout/_themegrid-container.scss';
+@import 'node_modules/outsystems-ui/src/scss/02-layout/_content.scss';
+@import 'node_modules/outsystems-ui/src/scss/02-layout/_ios-bounce.scss';
+@import 'node_modules/outsystems-ui/src/scss/02-layout/_header.scss';
+@import 'node_modules/outsystems-ui/src/scss/02-layout/_menu.scss';
+@import 'node_modules/outsystems-ui/src/scss/02-layout/_menu-layout-native.scss';
+@import 'node_modules/outsystems-ui/src/scss/02-layout/_menu-layout-side.scss';
+@import 'node_modules/outsystems-ui/src/scss/02-layout/_header-layout-side.scss';
+@import 'node_modules/outsystems-ui/src/scss/08-servicestudio-preview/_servicestudiopreview.scss';
+
+/* UI Patterns */
+@import 'node_modules/outsystems-ui/src/scss/04-patterns/06-utilities/_margin-container.scss';
+@import 'node_modules/outsystems-ui/src/scss/03-widgets/_btn.scss';
+@import 'node_modules/outsystems-ui/src/scripts/OSFramework/OSUI/Pattern/BottomSheet/scss/_bottomsheet.scss'
