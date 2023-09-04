@@ -19,19 +19,23 @@ namespace MyJSFramework.BottomSheet {
     export class MyBottomSheet {
         // OutSystems BottomSheet instance
         private _osuiBottomSheet: OSFramework.OSUI.Patterns.BottomSheet.IBottomSheet;
+        // BottomSheet Block Element
+        private _bottomSheetBlockElement: HTMLElement;
+        // BottomSheet Overlay Element
         private _bottomSheetOverlayElem: HTMLElement;
 
         constructor(bottomSheet: OSFramework.OSUI.Patterns.BottomSheet.IBottomSheet) {
             this._osuiBottomSheet = bottomSheet;
+            this._bottomSheetBlockElement = OSFramework.OSUI.Helper.Dom.GetElementById(this._osuiBottomSheet.widgetId);
         }
 
         public build() {
             this._osuiBottomSheet.build();
 
-            this._bottomSheetOverlayElem = OSFramework.OSUI.Helper.Dom.ClassSelector(this._osuiBottomSheet.selfElement.parentElement, 'osui-bottom-sheet-overlay');
+            this._bottomSheetOverlayElem = OSFramework.OSUI.Helper.Dom.ClassSelector(this._bottomSheetBlockElement, 'osui-bottom-sheet-overlay');
 
-            this._bottomSheetOverlayElem.addEventListener(OSFramework.OSUI.GlobalEnum.HTMLEvent.Click, () => {
-                // 
+            this._bottomSheetOverlayElem.addEventListener('click', () => {
+                //
             })
         }
     }
