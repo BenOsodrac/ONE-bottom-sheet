@@ -14,10 +14,10 @@ var MyJSFramework;
         class MyBottomSheet {
             constructor(bottomSheet) {
                 this._osuiBottomSheet = bottomSheet;
-                this._bottomSheetBlockElement = OSFramework.OSUI.Helper.Dom.GetElementById(this._osuiBottomSheet.widgetId);
             }
             build() {
                 this._osuiBottomSheet.build();
+                this._bottomSheetBlockElement = OSFramework.OSUI.Helper.Dom.GetElementById(this._osuiBottomSheet.widgetId);
                 this._bottomSheetOverlayElem = OSFramework.OSUI.Helper.Dom.ClassSelector(this._bottomSheetBlockElement, 'osui-bottom-sheet-overlay');
                 this._bottomSheetOverlayElem.addEventListener('click', () => {
                     this._osuiBottomSheet.close();

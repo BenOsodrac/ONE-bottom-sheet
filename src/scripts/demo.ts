@@ -26,11 +26,12 @@ namespace MyJSFramework.BottomSheet {
 
         constructor(bottomSheet: OSFramework.OSUI.Patterns.BottomSheet.IBottomSheet) {
             this._osuiBottomSheet = bottomSheet;
-            this._bottomSheetBlockElement = OSFramework.OSUI.Helper.Dom.GetElementById(this._osuiBottomSheet.widgetId);
         }
 
         public build() {
             this._osuiBottomSheet.build();
+
+            this._bottomSheetBlockElement = OSFramework.OSUI.Helper.Dom.GetElementById(this._osuiBottomSheet.widgetId);
 
             this._bottomSheetOverlayElem = OSFramework.OSUI.Helper.Dom.ClassSelector(this._bottomSheetBlockElement, 'osui-bottom-sheet-overlay');
 
