@@ -36,12 +36,12 @@ namespace MyJSFramework.BottomSheet {
             this._bottomSheetBlockElement = OSFramework.OSUI.Helper.Dom.GetElementById(this._osuiBottomSheet.widgetId);
 
             // Get the BottomSheet Overlay element
-            this._bottomSheetOverlayElem = OSFramework.OSUI.Helper.Dom.ClassSelector(this._bottomSheetBlockElement, 'osui-bottom-sheet-overlay');
+            // this._bottomSheetOverlayElem = OSFramework.OSUI.Helper.Dom.ClassSelector(this._bottomSheetBlockElement, OSFramework.OSUI.Patterns.BottomSheet.Enum.CssClass.PatternOverlay);
+            this._bottomSheetOverlayElem = this._bottomSheetBlockElement.querySelector('.osui-bottom-sheet-overlay');
 
             // Add the click event on the Overlay element
             this._bottomSheetOverlayElem.addEventListener('click', () => {
                 // Close the BottomSheet
-                this._osuiBottomSheet.close();
             })
         }
     }
